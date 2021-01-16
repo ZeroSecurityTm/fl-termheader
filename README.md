@@ -10,7 +10,7 @@ for linux (debian user)
 ==> sudo bash fl-termheader.sh
 -----------------------------
 for termux user
-==> bash f-termheader.sh
+==> bash fl-termheader.sh
 -----------------------------
 
 
