@@ -5,7 +5,7 @@ Os : Debian linux & termux
 
 <><><><><><><><><><><><><><><>
 
-# usage 
+# Usage : 
 for linux (debian user) 
 ==> sudo bash fl-termheader.sh
 -----------------------------
