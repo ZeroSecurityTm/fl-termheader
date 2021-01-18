@@ -32,6 +32,7 @@ banner3(){
 	echo -e "\e[1;35m/____/\___/_/   \____/   /____/\___/\___/\__,_/_/  /_/\__/\__, /   \e[0m"
 	echo -e "\e[1;35m                                                         /____/    \e[0m"
 }
+banner1
 s=(1.termux 2.debian)
 x=0
 while [[ $x -lt ${#s[@]} ]]; do
@@ -44,8 +45,9 @@ if [[ $os == 2 ]] ; then
 	echo "you choose debian now !"
 	sleep 2
 	echo ""
+	sudo apt --fix-broken install
 	sudo apt-get update 
-	sudo apt-get install figlet lolcat screenfetch
+	sudo apt-get install figlet lolcat screenfetch bash
 	sudo chsh -s bash
 	clear
 	sleep 2
@@ -69,16 +71,17 @@ if [[ $os == 2 ]] ; then
 	sleep 0.5
 	clear
 	banner1	
-	echo -e "\e[1;33m maximumradikali \e[0m"
-	sleep 0.5
+	echo -e "\e[1;33m coded by maximumradikali \e[0m"
+	sleep 4
 	clear
-	sleep 2
 	
 	
 
 	printf "Please wait ! \n"
+	echo ""
 	sl= screenfetch -L
 	printf "This is screenfetch" | lolcat -S
+	echo ""
 	printf "Do you want use screenfetch (yes or no ) => " | lolcat -S
 	read q
 	if [[ $q == yes ]] ; then
@@ -115,11 +118,18 @@ if [[ $os == 2 ]] ; then
 		echo "Ok wait !"
 		sleep 2
 		f1= figlet -f $f "$n" | lolcat -S
-		printf "Do you want set figlet & lolcat ? on terminal (yes , no ) => " | lolcat -S 
+		printf "Do you want set figlet & lolcat on your terminal (yes , no ) => " | lolcat -S 
 		read ox
 		if [[ $ox == yes ]] ; then
 			sudo echo " figlet -f $f "$n" | lolcat -S " >> /etc/bash.bashrc
 			echo "Figlet & lolcat has been set" | lolcat -S
+			printf "Would like restart your computer all method be complete (yes , no) => "
+			read restart
+				if [[ $restart == yes ]] ; then 
+					echo Wait to restart !
+					sleep 4
+					sudo reboot
+				fi
 			echo "Have nice day !" | lolcat -S
 		else 
 			echo skip ! 
@@ -132,9 +142,10 @@ elif [[ $os == 1 ]] ; then
 	echo "you choose termux now !"
 	sleep 2
 	echo ""
+	apt --fix-broken install
 	apt-get update 
-	apt-get install figlet lolcat screenfetch
-	chsh -s bash
+	apt-get install figlet lolcat screenfetch zsh
+	chsh -s zsh
 	clear
 	sleep 2
 	echo "welcome to Script ! "
@@ -160,18 +171,18 @@ elif [[ $os == 1 ]] ; then
 	echo -e "\e[1;33m maximumradikali \e[0m"
 	sleep 0.5
 	clear
-	sleep 2
+	sleep 4
 	
 	
 
 	printf "Please wait ! \n"
+	echo ""
 	sl= screenfetch -L
 	printf "This is screenfetch" | lolcat -S
 	printf "Do you want use screenfetch (yes or no ) => " | lolcat -S
 	read q
 	if [[ $q == yes ]] ; then
-		echo screenfetch -L >> /etc/bash.bashrc
-		echo "Screenfetch has been set"
+		echo screenfetch -L >> /data/data/com.termux/files/home/.zshrc
 		sleep 4
 	else 
 		echo "Skip it !"
@@ -206,8 +217,9 @@ elif [[ $os == 1 ]] ; then
 		printf "Do you want set figlet & lolcat ? on terminal (yes , no ) => " | lolcat -S 
 		read ox
 		if [[ $ox == yes ]] ; then
-			echo " figlet -f $f "$n" | lolcat -S " >> /etc/bash.bashrc
+			echo " figlet -f $f "$n" | lolcat -S " >> /data/data/com.termux/files/home/.zshrc
 			echo "Figlet & lolcat has been set" | lolcat -S
+			echo "Create New session on your terminal ! "
 			echo "Have nice day !" | lolcat -S
 		else 
 			echo skip ! 
