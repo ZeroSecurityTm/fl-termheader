@@ -1,130 +1,217 @@
-#!/bin/bash
-
-
-# coded by maximum radikali 
-# dont copy this script without credit ! 
-echo "are you using termux or debian(kali and more) type (debian or termux) ? :  "
-read os 
-if [[ $os == termux ]]; then
-try() {
-echo "try again !"
+clear
+sleep 1
+banner() {
+	echo "_____                      _____                      _ __ " | lolcat -S     
+	echo "/__  /  ___  _________     / ___/___  _______  _______(_) /___  __ " | lolcat -S
+	echo "  / /  / _ \/ ___/ __ \    \__ \/ _ \/ ___/ / / / ___/ / __/ / / / " | lolcat -S
+	echo " / /__/  __/ /  / /_/ /   ___/ /  __/ /__/ /_/ / /  / / /_/ /_/ /  " | lolcat -S
+	echo "/____/\___/_/   \____/   /____/\___/\___/\__,_/_/  /_/\__/\__, /   " | lolcat -S 
+	echo "                                                         /____/    " | lolcat -S
 }
-back=$(try)
-chsh -s /bin/bash
-apt-get install figlet lolcat
-gem install lolcat
+banner1() {
+	echo -e "\e[1;31m_____                      _____                      _ __ \e[0m"      
+	echo -e "\e[1;31m/__  /  ___  _________     / ___/___  _______  _______(_) /___  __ \e[0m"
+	echo -e "\e[1;31m  / /  / _ \/ ___/ __ \    \__ \/ _ \/ ___/ / / / ___/ / __/ / / / \e[0m"
+	echo -e "\e[1;31m / /__/  __/ /  / /_/ /   ___/ /  __/ /__/ /_/ / /  / / /_/ /_/ /  \e[0m" 
+	echo -e "\e[1;31m/____/\___/_/   \____/   /____/\___/\___/\__,_/_/  /_/\__/\__, /   \e[0m"
+	echo -e "\e[1;31m                                                         /____/    \e[0m"
+}
+banner2() {
+	echo -e "\e[1;29m_____                      _____                      _ __ \e[0m"      
+	echo -e "\e[1;29m/__  /  ___  _________     / ___/___  _______  _______(_) /___  __ \e[0m"
+	echo -e "\e[1;29m  / /  / _ \/ ___/ __ \    \__ \/ _ \/ ___/ / / / ___/ / __/ / / / \e[0m"
+	echo -e "\e[1;29m / /__/  __/ /  / /_/ /   ___/ /  __/ /__/ /_/ / /  / / /_/ /_/ /  \e[0m" 
+	echo -e "\e[1;29m/____/\___/_/   \____/   /____/\___/\___/\__,_/_/  /_/\__/\__, /   \e[0m"
+	echo -e "\e[1;29m                                                         /____/    \e[0m"
+}
+banner3(){
+	echo -e "\e[1;35m_____                      _____                      _ __ \e[0m"      
+	echo -e "\e[1;35m/__  /  ___  _________     / ___/___  _______  _______(_) /___  __ \e[0m"
+	echo -e "\e[1;35m  / /  / _ \/ ___/ __ \    \__ \/ _ \/ ___/ / / / ___/ / __/ / / / \e[0m"
+	echo -e "\e[1;35m / /__/  __/ /  / /_/ /   ___/ /  __/ /__/ /_/ / /  / / /_/ /_/ /  \e[0m" 
+	echo -e "\e[1;35m/____/\___/_/   \____/   /____/\___/\___/\__,_/_/  /_/\__/\__, /   \e[0m"
+	echo -e "\e[1;35m                                                         /____/    \e[0m"
+}
+s=(1.termux 2.debian)
+x=0
+while [[ $x -lt ${#s[@]} ]]; do
+	echo ${s[$x]}
+	x=$[$x + 1]
+done
+printf "Choose an option that you want : "
+read os
+if [[ $os == 2 ]] ; then
+	echo "you choose debian now !"
+	sleep 2
+	echo ""
+	sudo apt-get update 
+	sudo apt-get install figlet lolcat screenfetch
+	sudo chsh -s bash
+	clear
+	sleep 2
+	echo "welcome to Script ! "
+	sleep 2
+	banner
+	sleep 5
+	clear		
 
-clear
-echo "_____                      _____                      _ __ "  | lolcat -S     
-echo "/__  /  ___  _________     / ___/___  _______  _______(_) /___  __ " | lolcat -S
-echo "  / /  / _ \/ ___/ __ \    \__ \/ _ \/ ___/ / / / ___/ / __/ / / / " | lolcat -S 
-echo " / /__/  __/ /  / /_/ /   ___/ /  __/ /__/ /_/ / /  / / /_/ /_/ / " | lolcat -S 
-echo "/____/\___/_/   \____/   /____/\___/\___/\__,_/_/  /_/\__/\__, / " | lolcat -S 
-echo "                                                         /____/ v 1.0"  | lolcat -S 
-echo "Coded by MaximumRadikali" | lolcat -S 
-sleep 6
-clear
-v1= echo termux 
+			
+	banner1	
+	echo -e "\e[1;33m m   x    r  k l i \e[0m"
+	sleep 0.5
+	clear
+	banner2	
+	echo -e "\e[1;33m m a x  d r a k l i \e[0m"
+	sleep 0.5
+	clear
+	banner3	
+	echo -e "\e[1;33m m a xim ra kal i \e[0m"
+	sleep 0.5
+	clear
+	banner1	
+	echo -e "\e[1;33m maximumradikali \e[0m"
+	sleep 0.5
+	clear
+	sleep 2
+	
+	
 
-echo "$v1  welcome to this script " | lolcat -S 
-sleep 3
-clear
-w1= echo please wait. 
-sleep 0.5
-clear
-w2= echo please wait.. 
-sleep 0.5
-clear
-w3= echo please wait... 
-sleep 0.5
-clear
-showfigfonts 
-sleep 1
-echo ""
-echo " whats you want to choose font ? : " | lolcat -S 
-read font 
-echo  "Whats you want to name for terminal header ?" | lolcat -S 
-read name
-figlet -f $font "$name" | lolcat -s 
-sleep 3
-echo "Do you want set to terminal ? (Yes or No)" | lolcat -S 
-read set
-if [[ $set == yes ]]; then
-echo "you should copy this command : ( figlet -f $font ""$name"" | lolcat -s ) to last line command  " | lolcat -S 
-sleep 5
-nano /etc/bash.bashrc
-echo ""
-echo "" 
-echo "You should close termux and open again !"
-echo "Have nice day :)" | lolcat -S 
-echo ""  
-echo ""
-echo ""
-echo ""
-else 
-echo "Try again !"
-fi
+	printf "Please wait ! \n"
+	sl= screenfetch -L
+	printf "This is screenfetch" | lolcat -S
+	printf "Do you want use screenfetch (yes or no ) => " | lolcat -S
+	read q
+	if [[ $q == yes ]] ; then
+		sudo echo screenfetch -L >> /etc/bash.bashrc
+		echo "Screenfetch has been set"
+		sleep 4
+	else 
+		echo "Skip it !"
+		sleep 4
 
-elif [[ $os == debian ]]; then
+	fi
+	clear
+	echo $fl
+	fl= figlet figlet | lolcat 
+	printf "Do you want to use figlet & lolcat (yes , no) => " | lolcat -S 
+	read fn
+	if [[ $fn == yes ]] ; then
+		for ((x=0;x<10;x++)) ; do
+			echo "Please wait ."
+			sleep 0.3
+			clear
+			echo "Please wait .."
+			sleep 0.3
+			clear
+			echo "Please wait ..."
+			sleep 0.3
+			clear
+		done
+		showfigfonts
+		printf "Choose a font that you want (ex : standard) => " |lolcat -S
+		read f
+		printf "Enter a name that you want ! : " | lolcat -S
+		read n
+		echo "Ok wait !"
+		sleep 2
+		f1= figlet -f $f "$n" | lolcat -S
+		printf "Do you want set figlet & lolcat ? on terminal (yes , no ) => " | lolcat -S 
+		read ox
+		if [[ $ox == yes ]] ; then
+			sudo echo " figlet -f $f "$n" | lolcat -S " >> /etc/bash.bashrc
+			echo "Figlet & lolcat has been set" | lolcat -S
+			echo "Have nice day !" | lolcat -S
+		else 
+			echo skip ! 
+		fi
 
-sudo chsh -s /bin/bash
-sudo apt-get install figlet lolcat
-sudo gem install lolcat
 
-clear
-echo "_____                      _____                      _ __ "  | lolcat -S     
-echo "/__  /  ___  _________     / ___/___  _______  _______(_) /___  __ " | lolcat -S
-echo "  / /  / _ \/ ___/ __ \    \__ \/ _ \/ ___/ / / / ___/ / __/ / / / " | lolcat -S 
-echo " / /__/  __/ /  / /_/ /   ___/ /  __/ /__/ /_/ / /  / / /_/ /_/ / " | lolcat -S 
-echo "/____/\___/_/   \____/   /____/\___/\___/\__,_/_/  /_/\__/\__, / " | lolcat -S 
-echo "                                                         /____/ v 1.0"  | lolcat -S 
-echo "Coded by MaximumRadikali" | lolcat -S 
-sleep 6
 
-v1= cat /etc/hostname
-echo "$v1  welcome to this script " | lolcat -S 
-sleep 3
-clear
-w1= echo please wait. 
-sleep 0.5
-clear
-w2= echo please wait.. 
-sleep 0.5
-clear
-w3= echo please wait...
-sleep 0.5
-clear
-showfigfonts 
-sleep 1
-echo ""
-echo " whats you want to choose font ? : " | lolcat -S
-read font 
-echo  "Whats you want to name for terminal header ?" | lolcat -S 
-read name
-figlet -f $font "$name" | lolcat -s 
-sleep 3
-echo "Do you want set to terminal ? (Type yes or no)" | lolcat -S 
-read set
-if [[ $set == yes ]]; then
-echo "you should copy this command : ( figlet -f $font "$name" | lolcat -s ) to last line command then exit with (ctrl + x)" | lolcat -S
-sleep 0.5
-echo "Are you ready ? (yes or no)"
-read ready
-if [[ $ready == yes ]] ; then 
-sudo nano /etc/bash.bashrc
-echo "You should restart your linux to be complete . do you want agree ? (yes , no)"
-read reset
-if [[ $reset == yes ]] ; then
-echo "Have nice day :)" | lolcat -S
-sleep 3
-sudo reboot
-else
-echo $back 
-echo ""   
-echo ""
-echo ""
-echo ""
-fi
-fi
-fi
+	fi
+elif [[ $os == 1 ]] ; then
+	echo "you choose termux now !"
+	sleep 2
+	echo ""
+	apt-get update 
+	apt-get install figlet lolcat screenfetch
+	chsh -s bash
+	clear
+	sleep 2
+	echo "welcome to Script ! "
+	sleep 2
+	banner
+	sleep 5
+	clear		
+
+			
+	banner1	
+	echo -e "\e[1;33m m   x    r  k l i \e[0m"
+	sleep 0.5
+	clear
+	banner2	
+	echo -e "\e[1;33m m a x  d r a k l i \e[0m"
+	sleep 0.5
+	clear
+	banner3	
+	echo -e "\e[1;33m m a xim ra kal i \e[0m"
+	sleep 0.5
+	clear
+	banner1	
+	echo -e "\e[1;33m maximumradikali \e[0m"
+	sleep 0.5
+	clear
+	sleep 2
+	
+	
+
+	printf "Please wait ! \n"
+	sl= screenfetch -L
+	printf "This is screenfetch" | lolcat -S
+	printf "Do you want use screenfetch (yes or no ) => " | lolcat -S
+	read q
+	if [[ $q == yes ]] ; then
+		echo screenfetch -L >> /etc/bash.bashrc
+		echo "Screenfetch has been set"
+		sleep 4
+	else 
+		echo "Skip it !"
+		sleep 4
+
+	fi
+	clear
+	echo $fl
+	fl= figlet figlet | lolcat 
+	printf "Do you want to use figlet & lolcat (yes , no) => " | lolcat -S 
+	read fn
+	if [[ $fn == yes ]] ; then
+		for ((x=0;x<10;x++)) ; do
+			echo "Please wait ."
+			sleep 0.3
+			clear
+			echo "Please wait .."
+			sleep 0.3
+			clear
+			echo "Please wait ..."
+			sleep 0.3
+			clear
+		done
+		showfigfonts
+		printf "Choose a font that you want (ex : standard) => " |lolcat -S
+		read f
+		printf "Enter a name that you want ! : " | lolcat -S
+		read n
+		echo "Ok wait !"
+		sleep 2
+		f1= figlet -f $f "$n" | lolcat -S
+		printf "Do you want set figlet & lolcat ? on terminal (yes , no ) => " | lolcat -S 
+		read ox
+		if [[ $ox == yes ]] ; then
+			echo " figlet -f $f "$n" | lolcat -S " >> /etc/bash.bashrc
+			echo "Figlet & lolcat has been set" | lolcat -S
+			echo "Have nice day !" | lolcat -S
+		else 
+			echo skip ! 
+		fi
+	fi
+ 
 fi
