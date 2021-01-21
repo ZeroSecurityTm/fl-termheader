@@ -1,3 +1,4 @@
+#!/bin/bash 
 clear
 sleep 1
 banner() {
@@ -143,8 +144,9 @@ elif [[ $os == 1 ]] ; then
 	sleep 2
 	echo ""
 	apt --fix-broken install
-	apt-get update 
-	apt-get install figlet lolcat screenfetch zsh
+	apt update
+	apt upgrade
+	pkg install figlet lolcat screenfetch bash
 	chsh -s zsh
 	clear
 	sleep 2
