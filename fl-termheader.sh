@@ -49,6 +49,7 @@ if [[ $os == 2 ]] ; then
 	sudo apt --fix-broken install
 	sudo apt-get update 
 	sudo apt-get install figlet lolcat screenfetch bash
+	sudo gem install lolcat
 	sudo chsh -s bash
 	clear
 	sleep 2
@@ -145,8 +146,7 @@ elif [[ $os == 1 ]] ; then
 	echo ""
 	apt --fix-broken install
 	apt update
-	apt upgrade
-	pkg install figlet lolcat screenfetch bash
+	apt upgrademaximum.radik
 	chsh -s zsh
 	clear
 	sleep 2
