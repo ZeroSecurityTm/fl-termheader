@@ -50,7 +50,7 @@ if [[ $os == 2 ]] ; then
 	sudo apt-get update 
 	sudo apt-get install figlet lolcat screenfetch bash
 	sudo gem install lolcat
-	sudo chsh -s bash
+	sudo chsh -s /bin/bash
 	clear
 	sleep 2
 	echo "welcome to Script ! "
@@ -146,7 +146,7 @@ elif [[ $os == 1 ]] ; then
 	echo ""
 	apt --fix-broken install
 	apt update
-	apt upgrademaximum.radik
+	apt upgrade
 	chsh -s zsh
 	clear
 	sleep 2
